@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailWay UK - Train Schedules</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>RailWay UK</h1>
+                <span class="tagline">Your Journey Starts Here</span>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Schedules</a>
+                <a href="#" class="nav-link">Live Updates</a>
+                <a href="#" class="nav-link">Journey Planner</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="search-section">
+                <div class="search-container">
+                    <h2>Find Your Train</h2>
+                    <p class="search-subtitle">Enter your departure station to view live schedules</p>
+                    
+                    <div class="search-form">
+                        <div class="input-group">
+                            <input 
+                                type="text" 
+                                id="station-search-box" 
+                                class="search-input"
+                                placeholder="Enter station name (e.g., London Paddington, Manchester, Birmingham)"
+                                autocomplete="off"
+                            >
+                            <button id="search-button" class="search-btn">
+                                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <path d="m21 21-4.35-4.35"></path>
+                                </svg>
+                                Search Trains
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="popular-stations">
+                        <span class="popular-label">Popular stations:</span>
+                        <div class="station-tags">
+                            <button class="station-tag" data-station="London Paddington">London Paddington</button>
+                            <button class="station-tag" data-station="Manchester Piccadilly">Manchester Piccadilly</button>
+                            <button class="station-tag" data-station="Birmingham New Street">Birmingham New Street</button>
+                            <button class="station-tag" data-station="Edinburgh Waverley">Edinburgh Waverley</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section" id="results-section">
+                <div class="results-header">
+                    <h3 id="station-title">Train Departures</h3>
+                    <div class="live-indicator">
+                        <span class="live-dot"></span>
+                        Live Updates
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">All Trains</button>
+                    <button class="filter-btn" data-filter="on-time">On Time</button>
+                    <button class="filter-btn" data-filter="delayed">Delayed</button>
+                    <button class="filter-btn" data-filter="cancelled">Cancelled</button>
+                </div>
+
+                <div class="train-list-container">
+                    <ul id="train-list" class="train-list">
+                        <!-- Train schedules will be dynamically inserted here -->
+                    </ul>
+                </div>
+
+                <div id="no-results" class="no-results" style="display: none;">
+                    <div class="no-results-icon">🚂</div>
+                    <h4>No trains found</h4>
+                    <p>Try searching for a different station or check your spelling.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>RailWay UK</h4>
+                    <p>Connecting Britain through reliable rail services</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#">Live Departures</a>
+                    <a href="#">Journey Planner</a>
+                    <a href="#">Season Tickets</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Customer Service</a>
+                    <a href="#">Delays & Disruptions</a>
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

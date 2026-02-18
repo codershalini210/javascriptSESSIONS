@@ -1,0 +1,21 @@
+const myNameHeading = document.querySelector("h1")
+myNameHeading.innerText = "John Capner"
+
+const contactInfo = document.getElementById("dcontact")
+contactInfo.innerHTML = `
+Email: <a href="mailto:">johncapner@yahoo.com</a><br>
+Phone: 1236547890`
+
+const ul_skills = document.getElementById("ul_skills")
+const skill1 = document.createElement("li")
+skill1.innerText = "Machine Learning"
+const skill2 = document.createElement("li")
+skill2.innerText = " Cloud Computing"
+const skill3 = document.createElement("li")
+skill3.innerText = "NLP"
+ul_skills.appendChild(skill1)
+ul_skills.appendChild(skill2)
+ul_skills.appendChild(skill3)
+
+const img_profile = document.getElementById("img_profile")
+img_profile.src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAMAAzAMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAwQFAQIH/8QAKxABAAIBAwIEBQUBAAAAAAAAAAECAwQRMSFBElFhcQUiMoGhEzM0QpEj/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQH/2gAMAwEAAhEDEQA/APqgCoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABv122Q5dTjx9Jne3lAJhSnXx2xzPvL1XXU/tW0fkFsQ11WG3Txbe6aJiY3jaY9JAAAAAAAAAAAAAAAAAAAR5s1cNd7czxHm7myRixzee3DKyZLZLTa07yCTLqsuSNonw18oQguAABzzEPeLLfDO9J6d4eAGtgzVzV3rzHMJGRhyziyRbt3hrb+XCDoAAAAAAAAAAAAAAEgo/Eb73rTfiN5U0mpt4s959eiMwAFAAAABpaK3jwR5xOzNX/h37VvdBccAAAAAAAAAAAAAACQY1vqn3cdt9U+7i4AAAAAAC98Nn5bx6qK98O4t7wguRwEcAAAAAAAAAAAAACvrb2x4t68zMdVhX10b6efSdwZs89QFwAAAAAAE2kvamasRPSZ6oUuljfPSPVBqgAAAAAAAAAAAAAPOWsXpas94ejvuDFmNpmJ5gX9fiicXjisRaJ6zCguAAAAAAAt/Dq/9JvMdIjaFfBT9TNWu/Tfq1qxEV2rEQg6AAAAAAAAAAAAAAADlqxas1niY2ZOXHOO81t2a6rr6RbF4+9QZ4CgAAD3gpGTLWs77TKC3oMW1ZvPNuPRcIiIjaOPIAAAAAAAAAAAAAAAAAQa2YjTW+2zuoz/AKMR3meIZ+XUZMs73np5QCMBQAAT6L+TTrsgImazExPWAbQoYtbaOl43jtML6AAAAAAAAAAADlrRWN5mI+4Oirk1mOvSN7T+Fe+syW6R8senING961je9vDCtl1tI6UibT/kKE2m31TM+8uAkzZr55+eY2jisIwUAAAAAAPbmFrDrb12i+1o8+6qEGrj1OLJxbafKUjGSUzZMc/JaY90GsKOPXTH7lPvCziz4sn0W6+vQEoAAAAG8Ag1OeMUdNpvP4Z172vMza271qMk5M1reu0IwAFgAAAAAAAAAAAAAEAAgsafVWxzEXtNqfmGlExMRMd2K0NBfxYfDz4SC0ECD//Z"
