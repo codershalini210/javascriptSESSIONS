@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>London Borough Council - Council Tax Details</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Phase Banner (common in GOV.UK sites) -->
+      <div class="phase-banner">
+        <div class="container">
+          <span class="phase-tag">Beta</span>
+          <span>This is a new service – your feedback will help us to improve it.</span>
+        </div>
+      </div>
+
+      <header class="header">
+        <div class="container">
+          <h1 class="header-title">London Borough Council</h1>
+          <p class="header-subtitle">Council Tax Details Submission</p>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <div class="form-container">
+            <div class="form-header">
+              <h2>Submit Your Council Tax Details</h2>
+              <p>Please provide accurate information about your property and personal details for council tax assessment.</p>
+            </div>
+
+            <form id="councilTaxForm" class="council-form" novalidate>
+              <!-- Personal Details Section -->
+              <fieldset class="form-section">
+                <legend>Personal Details</legend>
+                
+                <div class="form-group">
+                  <label for="title" class="form-label">Title</label>
+                  <select id="title" name="title" class="form-input" required>
+                    <option value="">Select title</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Miss">Miss</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Dr">Dr</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <span class="error-message" id="title-error"></span>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName" class="form-label">First Name *</label>
+                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                    <span class="error-message" id="firstName-error"></span>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="lastName" class="form-label">Last Name *</label>
+                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                    <span class="error-message" id="lastName-error"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-input" required>
+                  <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. 020 7946 0958">
+                  <span class="error-message" id="phone-error"></span>
+                </div>
+              </fieldset>
+
+              <!-- Property Details Section -->
+              <fieldset class="form-section">
+                <legend>Property Details</legend>
+                
+                <div class="form-row">
+                  <div class="form-group form-group-small">
+                    <label for="houseNumber" class="form-label">House Number/Name *</label>
+                    <input type="text" id="houseNumber" name="houseNumber" class="form-input" required>
+                    <span class="error-message" id="houseNumber-error"></span>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="street" class="form-label">Street Name *</label>
+                    <input type="text" id="street" name="street" class="form-input" required>
+                    <span class="error-message" id="street-error"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="area" class="form-label">Area/District</label>
+                  <input type="text" id="area" name="area" class="form-input" placeholder="e.g. Westminster, Camden">
+                  <span class="error-message" id="area-error"></span>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="city" class="form-label">City *</label>
+                    <input type="text" id="city" name="city" class="form-input" value="London" required>
+                    <span class="error-message" id="city-error"></span>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="postcode" class="form-label">Postcode *</label>
+                    <input type="text" id="postcode" name="postcode" class="form-input" placeholder="e.g. SW1A 0AA" required>
+                    <span class="error-message" id="postcode-error"></span>
+                  </div>
+                </div>
+              </fieldset>
+
+              <!-- Council Tax Information Section -->
+              <fieldset class="form-section">
+                <legend>Council Tax Information</legend>
+                
+                <div class="form-group">
+                  <label for="propertyType" class="form-label">Property Type *</label>
+                  <select id="propertyType" name="propertyType" class="form-input" required>
+                    <option value="">Select property type</option>
+                    <option value="detached">Detached House</option>
+                    <option value="semi-detached">Semi-detached House</option>
+                    <option value="terraced">Terraced House</option>
+                    <option value="flat">Flat/Apartment</option>
+                    <option value="maisonette">Maisonette</option>
+                    <option value="bungalow">Bungalow</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <span class="error-message" id="propertyType-error"></span>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="bedrooms" class="form-label">Number of Bedrooms *</label>
+                    <select id="bedrooms" name="bedrooms" class="form-input" required>
+                      <option value="">Select</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6+">6+</option>
+                    </select>
+                    <span class="error-message" id="bedrooms-error"></span>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="occupancyDate" class="form-label">Occupancy Date *</label>
+                    <input type="date" id="occupancyDate" name="occupancyDate" class="form-input" required>
+                    <span class="error-message" id="occupancyDate-error"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="singleOccupancy" name="singleOccupancy" class="form-checkbox">
+                    <span class="checkmark"></span>
+                    I am the sole adult occupant (eligible for 25% single person discount)
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="studentExemption" name="studentExemption" class="form-checkbox">
+                    <span class="checkmark"></span>
+                    All occupants are full-time students (eligible for exemption)
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Additional Information Section -->
+              <fieldset class="form-section">
+                <legend>Additional Information</legend>
+                
+                <div class="form-group">
+                  <label for="comments" class="form-label">Additional Comments</label>
+                  <textarea id="comments" name="comments" class="form-textarea" rows="4" placeholder="Any additional information about your property or circumstances..."></textarea>
+                  <span class="error-message" id="comments-error"></span>
+                </div>
+              </fieldset>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Submit Council Tax Details</button>
+                <button type="button" class="btn btn-secondary" id="clearForm">Clear Form</button>
+              </div>
+            </form>
+
+            <div id="successMessage" class="success-message hidden">
+              <h3>✓ Submission Successful</h3>
+              <p>Your council tax details have been submitted successfully. You will receive a confirmation email shortly.</p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 London Borough Council. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
