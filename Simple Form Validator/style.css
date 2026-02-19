@@ -1,0 +1,14 @@
+.error
+{
+    color:red;
+}
+.success
+{
+    color:green;
+    
+}
+#error-message
+{
+    margin-top: 10px;
+    font-weight: bold;
+}
